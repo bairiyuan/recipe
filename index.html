@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder · 菜谱查找</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <svg class="logo" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M7 23h34c0 13-7 20-17 20S7 36 7 23ZM16 46h16M16 6v9m8-12v12m8-9v9"/></svg>
+      <h1>Recipe Finder</h1>
+      <p>发现世界各地的美味，找到你想做的那道菜</p>
+      <p class="source">菜谱数据来自 <a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">TheMealDB</a></p>
+    </header>
+
+    <form id="search-form" class="search-box" role="search">
+      <label class="sr-only" for="search-input">菜谱名称</label>
+      <input id="search-input" type="search" placeholder="输入英文菜名，例如 chicken、pasta" autocomplete="off" maxlength="100">
+      <button type="submit">搜索</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+    <section id="results" class="recipe-grid" aria-label="菜谱搜索结果" aria-busy="false"></section>
+
+    <section id="detail" hidden aria-labelledby="detail-title">
+      <button id="back-button" class="back-button">← 返回菜谱列表</button>
+      <div id="detail-content"></div>
+    </section>
+    <footer>Web 开发技术 · 菜谱查找</footer>
+  </main>
+</body>
+</html>
